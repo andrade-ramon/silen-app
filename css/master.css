@@ -1,0 +1,191 @@
+.body{
+
+     background: url(../_img/third.jpg) no-repeat center center fixed;
+     background-repeat:no-repeat;
+		 background-size: cover;
+
+ }
+
+.teste{
+    background: red;
+}
+
+div#interface{
+    font: 100% Calibri;
+    background-color: white;
+    margin: -8px ;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+
+}
+
+table{
+    background-color: white !important;
+}
+
+/* CSS  */
+@charset "UTF-8"
+
+body {
+    padding:0px;
+    margin: 0px;
+    background-color: aliceblue;
+    color: rgba(0,0,0,1);
+}
+
+div#interface{
+    font: 100% Calibri;
+    background-color: white;
+    margin: -8px ;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+
+}
+
+header#cabecalho{
+    height: 80px;
+    border-bottom: 1px #D6D6D6 solid;
+    background-image: url(../_imagens/background_restaurante.jpg);
+}
+
+
+
+/*==== Formatação do Menu ====*/
+nav#menu h1{
+    display: none;
+
+}
+
+nav#menu ul{
+    font: 100% Calibri;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav#menu ul li{
+    float: left;
+    position: relative;
+    display: block;
+}
+
+nav#menu ul li a{
+    color: #000000;
+    background: #EDEDED;
+    text-decoration: none;
+    margin: 0px;
+    padding: 5px 10px 5px 10px;
+    display: block;
+    position: relative;
+}
+
+nav#menu li ul {
+    position: relative;
+    display: none;
+}
+
+nav#menu ul li a:hover{
+    position: relative;
+    background: #D6D6D6;
+    font-weight: bold;
+}
+
+nav#menu li:hover ul{
+    display:block;
+    position: relative;
+}
+
+nav#menu li:hover li {
+    position: relative;
+    float: none;
+    font: 80% Arial;
+    background-color:#EDEDED;
+    padding: 0px ;
+}
+
+nav#menu li:hover ul li:hover{
+    position: relative;
+    background-color:#D6D6D6;
+    color: #000000;
+    font-weight: bold;
+}
+
+
+/*-------------------------------------------------------------*/
+section{
+    position:relative;
+    font: 100% Calibri;
+    width: 80%;
+    margin: auto;
+}
+
+section#corpo{
+    display: block;
+    float: left;
+    padding: 5px 20px 5px 20px   ;
+}
+
+label {
+    text-align: justify;
+    Color: white !important;
+}
+
+aside#lateral{
+    display: block;
+    width: 49%;
+    float: right;
+    padding: 10px ;
+}
+
+footer{
+    clear: both;
+    border-top: 1px solid #D6D6D6;
+    text-align: center;
+    background: #BEBEBE;
+    font-weight: bold;
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+
+.col-md-2{
+    width: 16% !important;
+    margin: 2px;
+}
+
+.row{
+	margin: 10px !important;
+}
+
+legend{
+	Color: white !important;
+	padding: 0px !important;
+	marging: 0px !important;
+
+}
+
+.container{
+	width:100% !important;
+	padding-left: 0px !important;
+}
+
+.form-horizontal, .control-label, .col-xs-2, .col-md-6{
+	padding-top: 0px !important;
+	padding-left: 0px !important;
+	text-align: left !important;
+}
+
+
+#divEndDes, #divEndRem{
+	display: none !important;
+}
+
+#buscarEnd {
+    width: 20px;
+}
+
+#btns{
+	text-align: rigth !important;
+	position:absolute;
+	left: 50% !important;
+	padding: 10px;
+	marging: 10px;
+}
