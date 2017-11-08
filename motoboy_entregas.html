@@ -26,6 +26,13 @@
   <script src="js/demo/dashboard.js"></script>
 
   <script src="js/motoboy_entregas.js"></script>
+  <style>
+  .tbody td{
+    height: 10px;
+    padding: 10px;
+    border-right: 1px solid ;
+  }
+  </style>
 </head>
 
 <body>
@@ -139,14 +146,14 @@
                       <table class="table table-bordered">
                         <thead>
                           <tr>
-                            <th class="text-center">ID</th>
+                            <th class="text-center">ORDEM</th>
                             <th>Endereço</th>
-                            <th>Status</th>
-                            <th>Iniciar</th>
-                            <th>Finalizar</th>
+                            <th class="text-center">Status</th>
+                            <th class="text-center">Iniciar</th>
+                            <th class="text-center">Finalizar</th>
                           </tr>
                         </thead>
-                        <tbody id="tabela-entregas">
+                        <tbody id="tabela-entregas" class="tbody">
                         </tbody>
                       </table>
                     </div>

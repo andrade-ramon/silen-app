@@ -1,5 +1,5 @@
-var LOGIN_URL = "https://silen.herokuapp.com/app/login";
-// var LOGIN_URL = "http://localhost:8080/app/login";
+// var LOGIN_URL = "https://silen.herokuapp.com/app/login";
+var LOGIN_URL = "http://localhost:8080/app/login";
 
 function acessar(){
   var login = $("#login").val();
@@ -21,22 +21,7 @@ function acessar(){
       window.location = "motoboy_entregas.html?userId=" + data.userId + "&username=" + data.login;
     }, 
     error: function(data) {
-      console.log(data);
       alert(data.responseJSON.message);
     }
   });
-
-  // $.ajax({
-  //   url: 'http://localhost:8080/app/login',
-  //   type: 'POST',
-  //   contentType: 'application/x-www-form-urlencoded',
-  //   data: {
-  //     login : "ramon", 
-  //     password: "teste"
-  //   },
-  //   success: function(data) {
-  //     alert(data.login);
-  //   }
-  // });
-
 }

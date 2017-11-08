@@ -1,7 +1,7 @@
-var ENTREGAS_URL = "https://silen.herokuapp.com/app/minhas-entregas/";
-var ENTREGAS_START_URL = "https://silen.herokuapp.com/app/entrega/";
-// var ENTREGAS_URL = "http://localhost:8080/app/minhas-entregas/";
-// var ENTREGAS_START_URL = "http://localhost:8080/app/entrega/";
+// var ENTREGAS_URL = "https://silen.herokuapp.com/app/minhas-entregas/";
+// var ENTREGAS_START_URL = "https://silen.herokuapp.com/app/entrega/";
+var ENTREGAS_URL = "http://localhost:8080/app/minhas-entregas/";
+var ENTREGAS_START_URL = "http://localhost:8080/app/entrega/";
 
 function parse_query_string(query) {
   var vars = query.split("&");
@@ -38,7 +38,24 @@ function getEntregas(userId) {
     },
     success: function(data) {
       for (var i = 0; i < data.length; i++) {
-        $("#tabela-entregas").append("<tr><td class='text-center'>" + data[i].id + "</td><td><a href='motoboy_map.html?latitude=" + data[i].latitude + "&longitude=" + data[i].longitude + "&userId=" + data[i].motoboy.user.id + "' class='btn-link'>"+data[i].cliente.endereco+"</a></td><td>" + data[i].status + "</td><td onclick='iniciarEntrega("+data[i].id+")'>Iniciar</td><td onclick='finalizarEntrega(" + data[i].id+")'>Finalizar</td></tr>");
+        $("#tabela-entregas").append("<tr>");
+        $("#tabela-entregas").append("<td class='text-center'>" + (i+1) + "</td>");
+        $("#tabela-entregas").append("<td><a href='motoboy_map.html?latitude=" + data[i].latitude + "&longitude=" + data[i].longitude + "&userId=" + data[i].motoboy.user.id + "' class='btn-link'>"+data[i].cliente.endereco+"</a></td>");
+        $("#tabela-entregas").append("<td class='text-center'>" + data[i].status + "</td>");
+        if(data[i].status != 'ABERTA') {
+          $("#tabela-entregas").append("<td class='text-center'>----</td>");
+        } else {
+          $("#tabela-entregas").append("<td class='text-center' style='cursor:pointer; color:blue' onclick='iniciarEntrega(" + data[i].id + ")'>Iniciar</td>");
+        }
+
+        if(data[i].status == 'INICIADA') {
+          $("#tabela-entregas").append("<td class='text-center' style='color:red; cursor:pointer' onclick='finalizarEntrega(" + data[i].id+")'>Finalizar</td>");  
+        } else {
+          $("#tabela-entregas").append("<td class='text-center'>----</td>");  
+        }
+        
+        $("#tabela-entregas").append("</tr>");
+        
       }
     }, 
     error: function(data) {
