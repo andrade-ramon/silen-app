@@ -1,7 +1,7 @@
 var ENTREGAS_URL = "https://silen.herokuapp.com/app/minhas-entregas/";
 var ENTREGAS_START_URL = "https://silen.herokuapp.com/app/entrega/";
-// var ENTREGAS_URL = "http://localhost:8080/app/minhas-entregas/";
-// var ENTREGAS_START_URL = "http://localhost:8080/app/entrega/";
+var ENTREGAS_URL = "http://localhost:8080/app/minhas-entregas/";
+var ENTREGAS_START_URL = "http://localhost:8080/app/entrega/";
 
 function parse_query_string(query) {
   var vars = query.split("&");

@@ -1,5 +1,5 @@
-var LOGIN_URL = "https://silen.herokuapp.com/app/login";
-// var LOGIN_URL = "http://localhost:8080/app/login";
+// var LOGIN_URL = "https://silen.herokuapp.com/app/login";
+var LOGIN_URL = "http://localhost:8080/app/login";
 
 function acessar(){
   var login = $("#login").val();

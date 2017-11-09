@@ -22,6 +22,12 @@ function backToEntregas(){
   return false;
 }
 
+function tempoPage() {
+  var query = window.location.search.substring(1);
+  var userId = parse_query_string(query).userId;
+  window.location = "motoboy_tempo.html?userId=" + userId;
+}
+
 function initializeMap() {
   var query = window.location.search.substring(1);
   var latitude = parseFloat(parse_query_string(query).latitude);
