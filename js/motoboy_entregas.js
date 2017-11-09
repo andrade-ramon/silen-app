@@ -27,6 +27,12 @@ function entregasPage(){
   return false;
 }
 
+function tempoPage() {
+  var query = window.location.search.substring(1);
+  var userId = parse_query_string(query).userId;
+  window.location = "motoboy_tempo.html?userId=" + userId;
+}
+
 
 function getEntregas(userId) {
   $.ajax({
